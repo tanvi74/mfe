@@ -6,8 +6,8 @@ import MarketingApp from "./components/MarketingApp";
 import Header from './components/Header'
 
 const generateClassName = createGenerateClassName({
-    prodouctionPrefix: 'co',
-})
+    productionPrefix: 'co-', // Add a dash for clarity
+});
 
 export default () => {
     return (
