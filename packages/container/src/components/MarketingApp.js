@@ -17,11 +17,17 @@ export default () => {
             }
         });
 
-        const unlisten = history.listen(onParentNavigate);
+        console.log(onParentNavigate)
+        if(onParentNavigate)
+        {
+            const unlisten = history.listen(onParentNavigate);
 
-        return () => {
-            unlisten(); // Cleanup history listener when the component unmounts
-        };
+            return () => {
+                unlisten(); // Cleanup history listener when the component unmounts
+            };
+        }
+
+       
     }, [history]);
 
     return <div ref={ref} />;
