@@ -17,8 +17,8 @@ export default () => {
             }
         });
 
-        console.log(onParentNavigate)
-        if(onParentNavigate)
+        console.log(MarketingMount)
+        if(MarketingMount)
         {
             const unlisten = history.listen(onParentNavigate);
 
