@@ -9,7 +9,7 @@ const MarketingLazy = lazy(() => import('./components/MarketingApp'));
 const AuthLazy = lazy(() => import('./components/AuthApp'));
 
 const generateClassName = createGenerateClassName({
-    productionPrefix: 'co-', // Add a dash for clarity
+    productionPrefix: 'co-', 
 });
 
 export default () => {
