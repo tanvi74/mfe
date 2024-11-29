@@ -17,8 +17,12 @@ export default () => {
             }
         });
 
-        history.listen(onParentNavigate);
-    }, []);
+        const unlisten = history.listen(onParentNavigate);
+
+        return () => {
+            unlisten(); // Cleanup history listener when the component unmounts
+        };
+    }, [history]);
 
     return <div ref={ref} />;
 }
