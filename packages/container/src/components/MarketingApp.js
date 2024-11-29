@@ -17,15 +17,11 @@ export default () => {
             }
         });
 
-        console.log(MarketingMount)
-        if(MarketingMount)
-        {
-            const unlisten = history.listen(onParentNavigate);
+        const unlisten = history.listen(onParentNavigate);
 
-            return () => {
-                unlisten(); // Cleanup history listener when the component unmounts
-            };
-        }
+        return () => {
+            unlisten(); // Cleanup history listener when the component unmounts
+        };
 
        
     }, [history]);
