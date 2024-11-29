@@ -4,7 +4,7 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
 // Mout funtion to start up the app
-const mount = (el, { onNavigate }) => 
+const mount = (el, { onNavigate, defaultHistory }) => 
 {
     const history = defaultHistory || createMemoryHistory();
 
